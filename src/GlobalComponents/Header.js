@@ -11,7 +11,7 @@ import {
   FaBlog,
   FaServicestack,
 } from "react-icons/fa";
-import LogoB from "../LogoB.png";
+import LogoB from "../assets/images/LogoB.png";
 
 const Header = ({ cartCount = 0 }) => {
   const [showDropdown, setShowDropdown] = useState(false);

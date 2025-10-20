@@ -1,5 +1,5 @@
-// src/App.js
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "./GlobalComponents/Header";
 import Footer from "./GlobalComponents/Footer";
 
@@ -12,21 +12,20 @@ import Contacts from "./pages/Contacts/Contacts";
 
 function App() {
   return (
-    <>
+    <div>
       <Header />
-
-      <main>
-        {/* All pages rendered sequentially for testing */}
-        <Home />
-        <About />
-        <Services />
-        <Projects />
-        <Blog />
-        <Contacts />
+      <main style={{ padding: "20px" }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contacts" element={<Contacts />} />
+        </Routes>
       </main>
-
       <Footer />
-    </>
+    </div>
   );
 }
 
